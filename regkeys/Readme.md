@@ -1,3 +1,3 @@
-# Reg Files
+## Reg Files
   
-## Here are the needed windows registry keys.
+### Here are the needed windows registry keys.
