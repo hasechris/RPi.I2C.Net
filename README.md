@@ -19,8 +19,7 @@ You have to compile this on your *unix box for yourself. Sorry :(
 
 ### 2. Wrapper for C# Programs
 This is the more interesting part of this repo.
-This library, which is coded in Visual Studio 2013, is like a wrapper for the C functions in the Native I2C library, so you can use the c functions in C# projects. *YAAY*
-
+This library, which is coded in Visual Studio 2013, is like a wrapper for the C functions in the Native I2C library, so you can use the c functions in C# projects. *woohooooo*
 
 All parts are provided as sourcefiles, so you can use them in your next C# project.
 
