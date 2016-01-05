@@ -27,9 +27,10 @@ All parts are provided as sourcefiles, so you can use them in your next C# proje
 Everything down below here is copied from Max's repo for integrity.
   
   
-  
-------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------
+-----
+-----
+-----
+-----
 
 I2C library on C# for Raspberry Pi. About connecting Arduino and Raspberry Pi read this blog posts: [hardware part](http://blog.mshmelev.com/2013/06/connecting-raspberry-pi-and-arduino.html) and [software part](http://blog.mshmelev.com/2013/06/connecting-raspberry-pi-and-arduino-software.html).
 
