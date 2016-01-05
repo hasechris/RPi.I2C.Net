@@ -10,15 +10,22 @@ If you have a change, feel free to make a pull request. I try to keep this libra
 
 RPi.I2C.Net
 ====
-We have two parts in this repo.
+We have two parts in this repo. Code and examples are in the [repo wiki.]()
 
-## Native I2C C library
+# 1. Native I2C C library
 Located under Lib/LibNativeI2C/
 You have to compile this on your *unix box for yourself. Sorry :(
 
+# 2. Wrapper for C# Programs
+This is the more interesting part of this repo.
+This library, which is coded in Visual Studio 2013, is like a wrapper for the C functions in the Native I2C library, so you can use the c functions in C# projects. *YAAY*
 
 
+All parts are provided as sourcefiles, so you can use them in your next C# project.
 
+Everything down below here is copied from Max's repo for integrity.
+#######################################################################################
+#######################################################################################
 
 I2C library on C# for Raspberry Pi. About connecting Arduino and Raspberry Pi read this blog posts: [hardware part](http://blog.mshmelev.com/2013/06/connecting-raspberry-pi-and-arduino.html) and [software part](http://blog.mshmelev.com/2013/06/connecting-raspberry-pi-and-arduino-software.html).
 
@@ -72,4 +79,3 @@ Results: **830 transactions per second** (4980 Bytes/s total)
 
 ## License
 The project uses [MIT license](https://github.com/mshmelev/RPi.I2C.Net/blob/master/license.txt): do whatever you want wherever you want it.
-
