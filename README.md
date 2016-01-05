@@ -3,8 +3,8 @@ Note
 All Credits and Copyrights under the MIT License to Max!!
 
 This library is originally from Max Shmelev, you can find it [here](https://github.com/mshmelev/RPi.I2C.Net).
-I copied it to advance and put some new things in there. Max seems to ignore push requests,
-a user made a change in his library and Max hasn't imported in his repo.
+I copied it to change and put some new things in it. Max seems to ignore push requests,
+a user made a change in his library and Max hasn't imported it in his repo since 2012.
 
 If you have a change, feel free to make a pull request. I try to keep this library tidy and clean =)
 
