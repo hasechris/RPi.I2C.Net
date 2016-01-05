@@ -25,7 +25,9 @@ This library, which is coded in Visual Studio 2013, is like a wrapper for the C 
 All parts are provided as sourcefiles, so you can use them in your next C# project.
 
 Everything down below here is copied from Max's repo for integrity.
-
+  
+  
+  
 ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------
 
