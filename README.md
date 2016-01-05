@@ -8,8 +8,7 @@ a user made a change in his library and Max hasn't imported in his repo.
 
 If you have a change, feel free to make a pull request. I try to keep this library tidy and clean =)
 
-RPi.I2C.Net
-====
+### RPi.I2C.Net
 We have two parts in this repo. Code and examples are in the [repo wiki.]()
 
 ### 1. Native I2C C library
