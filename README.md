@@ -10,7 +10,7 @@ If you have a change, feel free to make a pull request. I try to keep this libra
 
 ### RPi.I2C.Net
 We have two parts in this repo. Code and examples are in the 
-    [repo wiki.]()
+    repo wiki
 
 ### 1. Native I2C C library
 Located under [LibNativeI2C/src](https://github.com/hasechris/RPi.I2C.Net/tree/master/LibNativeI2C/src)
