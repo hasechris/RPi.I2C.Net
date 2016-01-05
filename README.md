@@ -78,4 +78,4 @@ Sending 3-byte packet to Arduino and reading back the respose 3-byte packet.
 Results: **830 transactions per second** (4980 Bytes/s total)
 
 ## License
-The project uses [MIT license](https://github.com/mshmelev/RPi.I2C.Net/blob/master/license.txt): do whatever you want wherever you want it.
+The project uses [MIT license](https://github.com/hasechris/RPi.I2C.Net/blob/master/License.md): do whatever you want wherever you want it.
