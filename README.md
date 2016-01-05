@@ -1,5 +1,13 @@
-RPi.I2C.Net
+Note
 ===========
+
+This library is originally from Max Shmelev, you can find it [here](https://github.com/mshmelev/RPi.I2C.Net).
+
+
+
+
+RPi.I2C.Net
+=====
 
 I2C library on C# for Raspberry Pi. About connecting Arduino and Raspberry Pi read this blog posts: [hardware part](http://blog.mshmelev.com/2013/06/connecting-raspberry-pi-and-arduino.html) and [software part](http://blog.mshmelev.com/2013/06/connecting-raspberry-pi-and-arduino-software.html).
 
