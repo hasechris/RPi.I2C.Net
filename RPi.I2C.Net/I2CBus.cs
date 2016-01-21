@@ -10,7 +10,6 @@ namespace RPi.I2C.Net
     {
         private int busHandle;
 
-
         /// <summary>
         /// .ctor
         /// </summary>
@@ -24,7 +23,6 @@ namespace RPi.I2C.Net
             busHandle = res;
         }
 
-
         /// <summary>
         /// Creates new instance of I2CBus.
         /// </summary>
@@ -37,22 +35,16 @@ namespace RPi.I2C.Net
             return new I2CBus(busPath);
         }
 
-
-
         public void Finalyze()
         {
             Dispose(false);
         }
-
-
 
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-
-
 
         protected virtual void Dispose(bool disposing)
         {
@@ -68,7 +60,6 @@ namespace RPi.I2C.Net
             }
         }
 
-
         /// <summary>
         /// Writes single byte.
         /// </summary>
@@ -80,7 +71,6 @@ namespace RPi.I2C.Net
             bytes[0] = b;
             WriteBytes(address, bytes);
         }
-
 
         /// <summary>
         /// Writes array of bytes.
@@ -97,7 +87,6 @@ namespace RPi.I2C.Net
                 throw new IOException(String.Format("Error writing to address '{0}': I2C transaction failed", address));
         }
 
-
         /// <summary>
         /// Writes command with data.
         /// </summary>
@@ -111,7 +100,6 @@ namespace RPi.I2C.Net
             bytes[1] = data;
             WriteBytes(address, bytes);
         }
-
 
         /// <summary>
         /// Writes command with data.
@@ -129,7 +117,6 @@ namespace RPi.I2C.Net
             WriteBytes(address, bytes);
         }
 
-
         /// <summary>
         /// Writes command with data.
         /// </summary>
@@ -144,7 +131,6 @@ namespace RPi.I2C.Net
             bytes[2] = (byte)(data >> 8);
             WriteBytes(address, bytes);
         }
-
 
         /// <summary>
         /// Reads bytes from device with passed address.
@@ -166,43 +152,18 @@ namespace RPi.I2C.Net
 
             return buf;
         }
-        public byte write_word_read_byte(int busHandle, int addr, byte byte_msb, byte byte_lsb, int len=1)
+
+        public byte[] write_word_read_byte(int addr, byte byte_msb, byte byte_lsb, int read_len=1)
         {
-            byte result = new byte();
+            byte[] buf = new byte[read_len];
+            byte[] bytes = new byte[2];
+            int res_write=0, res_read=0;
 
-            int res = I2CNativeLib.write_word_read_byte(busHandle, addr, byte_msb, byte_lsb, result, len);
-            if (res == -1)
-            {
-                throw new IOException(String.Format("Error accessing device address '{0}': {1}", addr, UnixMarshal.GetErrorDescription(Stdlib.GetLastError())));
-            }
-            if (res <= 0)
-            {
-                throw new IOException(String.Format("Error reading from address '{0}': I2C Transaction failed", addr));
-            }
+            bytes[0] = byte_msb;
+            bytes[1] = byte_lsb;
 
-            if (res < len)
-            {
-                throw new IOException(String.Format("Error: Recieved to many bytes from I2C Slave: {0}", addr));
-            }
-            else
-            {
-                return result;
-            }
-        }
-
-        public void write_word_read_byte_repeated(int busHandle, int addr, byte byte_msb, byte byte_lsb, int len)
-        {
-            //todo
-        }
-
-        public void fram_write_byte(int busHandle, int addr, byte[] buf, int len)
-        {
-            //todo
-        }
-
-        public void fram_read_byte(int busHandle, int addr, byte[] buf, int len)
-        {
-            //todo
+            I2CNativeLib.write_word_read_byte(busHandle, addr, bytes, bytes.Length, buf, buf.Length, res_write, res_read);
+            return buf;
         }
     }
 }

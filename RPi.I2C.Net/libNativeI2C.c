@@ -39,18 +39,18 @@ int readBytes (int busHandle, int addr, byte* buf, int len)
 	return n;
 }
 
-int write_word_read_byte(int busHandle, int addr, byte* bytes,int len, byte* buf, int len, int* res_write, int* res_read)
+int write_word_read_byte(int busHandle, int addr, byte *bytes, int write_len, byte *read_buf, int read_len, int *res_write, int *res_read)
 {
 	if (ioctl(busHandle, I2C_SLAVE, addr) < 0)
 	{
-		return res_write = -1;
+		return *res_write = -1;
 	}
 
-	if (write(busHandle, bytes, len) != len)
+	if (write(busHandle, bytes, write_len) != write_len)
 	{
-		res_write = -2;
+		*res_write = -2;
 	}else {
-		res_write = len;
+		*res_write = write_len;
 	}
-	res_read = read(busHandle, buf, len);
+	return *res_read = read(busHandle, read_buf, read_len);
 }
